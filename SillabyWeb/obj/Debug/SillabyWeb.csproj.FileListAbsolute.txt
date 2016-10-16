@@ -1,0 +1,6 @@
+C:\Users\jramirez2\Downloads\Napa_Sillaby\SillabyWeb\bin\SillabyWeb.dll.config
+C:\Users\jramirez2\Downloads\Napa_Sillaby\SillabyWeb\bin\SillabyWeb.dll
+C:\Users\jramirez2\Downloads\Napa_Sillaby\SillabyWeb\bin\SillabyWeb.pdb
+C:\Users\jramirez2\Downloads\Napa_Sillaby\SillabyWeb\obj\Debug\SillabyWeb.csprojResolveAssemblyReference.cache
+C:\Users\jramirez2\Downloads\Napa_Sillaby\SillabyWeb\obj\Debug\SillabyWeb.dll
+C:\Users\jramirez2\Downloads\Napa_Sillaby\SillabyWeb\obj\Debug\SillabyWeb.pdb

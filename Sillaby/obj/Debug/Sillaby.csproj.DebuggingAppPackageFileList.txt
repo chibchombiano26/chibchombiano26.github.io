@@ -1,0 +1,2 @@
+bin\Debug\OfficeAppManifests\Sillaby.xml
+C:\Users\jramirez2\Downloads\Napa_Sillaby\Sillaby\bin\Debug\Sillaby.debugapp

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SharePointSiteUrl>
+    </SharePointSiteUrl>
+    <OfficeAppStartAction>Microsoft Excel</OfficeAppStartAction>
+    <GeneratedFeatureId>c1451898-d1fe-4424-9a8c-015c310ca75e</GeneratedFeatureId>
+    <GeneratedPackageId>f0391390-8d98-4955-b410-501f2e49ed6d</GeneratedPackageId>
+    <GeneratedModuleId>{e6a43b74-32a6-42a7-a3d1-e1b33c037486}</GeneratedModuleId>
+    <GeneratedListId>{fbf5e704-532e-4347-91bd-e92aba5ec9b5}</GeneratedListId>
+    <GeneratedProductId>{1a5cf43a-6592-47fb-83a9-59f990d58502}</GeneratedProductId>
+    <GeneratedAppVersion>1.0.0.0</GeneratedAppVersion>
+    <GeneratedClientSecret>VLFuAd/J6yc3Xkm5rwzI6aegbBK6rycBMHC9v0prEIU=</GeneratedClientSecret>
+  </PropertyGroup>
+</Project>

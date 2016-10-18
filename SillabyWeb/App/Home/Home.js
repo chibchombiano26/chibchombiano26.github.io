@@ -1,4 +1,5 @@
 ﻿/// <reference path="../App.js" />
+/// <reference path="C:\Users\jramirez2\Downloads\Napa_Sillaby\SillabyWeb\Content/nsu/wizard/js/input.js" />
 // global app
 
 (function () {
@@ -21,7 +22,7 @@
                     //initialize events
                     sillaby.init("#wizardContent", setValueCustomControl);
                     //List controls on the document
-                    sillaby.listControls().done(function (data) {
+                    sillaby.listControlsRegex("--*--").done(function (data) {
                         //debugger
                     })
                 })
@@ -37,8 +38,8 @@
         if (window.countControls <= sillaby.controls.length -1){
 
             var control = sillaby.controls[window.countControls];
-            sillaby.executeFunctionOnControl(control.m_id, value);
-
+            //sillaby.executeFunctionOnControl(control.m_id, value);
+            sillaby.search("--*--", sillaby.addWildCard(value), control.m__Id);
             window.countControls = window.countControls + 1;
         }
 

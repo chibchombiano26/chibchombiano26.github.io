@@ -29,7 +29,7 @@
 
 function getParameters() {
 
-    $('#wizardContent').load('/Content/nsu/wizard/template/input.html');
+    $('#wizardContent').load('/SillabyWeb/Content/nsu/wizard/template/input.html');
 
     // Run a batch operation against the Word object model.
     Word.run(function (context) {

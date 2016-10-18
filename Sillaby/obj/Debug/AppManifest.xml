@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="Sillaby"
-     ProductID="{e87f3fb3-8382-4ee2-a59b-1f162de4b7e1}"
+     ProductID="{1b8b3d1a-8dfa-4421-ad15-b2494261a2aa}"
      Version="1.0.0.0"
      SharePointMinVersion="15.0.0.0"
 >

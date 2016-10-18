@@ -1,6 +1,6 @@
 ﻿sillaby.loadDocx = function () {
     var dfd = jQuery.Deferred();
-    $.get("/Content/Sample/base64.txt", function (data) {        
+    $.get("https://chibchombiano26.github.io/SillabyWeb/Content/Sample/base64.txt", function (data) {
         dfd.resolve(data);
     })
    .done(function (e) {

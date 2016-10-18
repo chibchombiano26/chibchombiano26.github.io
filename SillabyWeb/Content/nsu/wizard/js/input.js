@@ -18,7 +18,7 @@ window.sillaby = (function () {
     }
 
     lib.getUrlRequest = function () {
-        if (lib.getBaseUrl().indexOf("localhost")) {
+        if (lib.getBaseUrl().indexOf("localhost") == -1) {
             return "";
         }
         else {

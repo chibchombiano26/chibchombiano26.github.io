@@ -63,7 +63,12 @@
     <Content Include="App\Home\Home.css" />
     <Content Include="App\Home\Home.html" />
     <Content Include="App\Home\Home.js" />
+    <Content Include="Content\nsu\listControls.js" />
+    <Content Include="Content\nsu\loadDocument.js" />
+    <Content Include="Content\nsu\wizard\js\input.js" />
+    <Content Include="Content\nsu\wizard\template\input.html" />
     <Content Include="Content\Office.css" />
+    <Content Include="Content\Sample\base64.txt" />
     <Content Include="Images\Close.png" />
     <Content Include="Scripts\_officeintellisense.js" />
     <Content Include="Scripts\_references.js" />

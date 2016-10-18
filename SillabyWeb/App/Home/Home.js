@@ -7,11 +7,42 @@
     // The initialize function must be run each time a new page is loaded
     Office.initialize = function (reason) {
         $(document).ready(function () {
-            app.initialize();
+            
+            window.countControls = 0;
 
-            $('#get-data-from-selection').click(getParameters);
+            //List of all the controls
+            //sillaby.controls
+
+            app.initialize();
+            //Load the dock file
+            sillaby.loadDocx().done(function (documen64) {
+                //Put the text of loaded file in the document
+                sillaby.displayContentDocx(documen64).done(function () {
+                    //initialize events
+                    sillaby.init("#wizardContent", setValueCustomControl);
+                    //List controls on the document
+                    sillaby.listControls().done(function (data) {
+                        //debugger
+                    })
+                })
+            })           
+            
+            $('#get-data-from-selection').click(getParameters);            
+
         });
     };
+
+    function setValueCustomControl(value, type){
+            
+        if (window.countControls <= sillaby.controls.length -1){
+
+            var control = sillaby.controls[window.countControls];
+            sillaby.executeFunctionOnControl(control.m_id, value);
+
+            window.countControls = window.countControls + 1;
+        }
+
+    }
 
     // Reads data from current document selection and displays a notification
     function getDataFromSelection() {
@@ -26,54 +57,6 @@
 		);
     }
 
-    function getParameters() {
-        // Run a batch operation against the Word object model.
-        Word.run(function (context) {
-
-            // Create a proxy object for the content controls collection that contains a specific tag.
-            var contentControlsWithTag = context.document.contentControls.getByTag('input');
-
-            // Queue a command to load the text property for all of content controls with a specific tag.
-            context.load(contentControlsWithTag, 'text,title');
-
-            // Synchronize the document state by executing the queued commands,
-            // and return a promise to indicate task completion.
-            return context.sync().then(function () {
-                if (contentControlsWithTag.items.length === 0) {
-                    console.log('error');
-                } else {
-
-                    var items = [];
-                    var list = contentControlsWithTag.items;
-
-                    for (var i = 0; i < list.length; i++) {
-                        var item = list[i];
-                        items.push({ id: item.m_title, value: item.m_text });
-                    }
-
-                    var itemsString = JSON.stringify(items);
-
-                    app.showNotification('Info loaded:', '"' + itemsString + '"');
-
-                    var url = "http://localhost:8540/syllabi/Syllabi/SaveInfo";
-                    $.post(url, itemsString,
-                    function (data, status) {
-                        showNotification('Success', 'Information saved on db thanks');
-                    }, function (err) {
-                        debugger
-                    });
-
-                }
-
-            });
-        })
-        .catch(function (error) {
-            console.log('Error: ' + JSON.stringify(error));
-            if (error instanceof OfficeExtension.Error) {
-                console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-            }
-        });
-    }
-
+    
 
 })();

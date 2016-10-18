@@ -105,7 +105,8 @@ sillaby.executeFunctionOnControl = function (id, params) {
                 // Queue a command to replace text in the first content control. 
 
                 if (index > -1) {
-                    contentControls.items[index].insertText(params, 'Replace');
+                    //contentControls.items[index].insertText(params, 'Replace');
+                    contentControls.items[index].clear();
                 }
 
                 // Synchronize the document state by executing the queued commands, 
